@@ -1,0 +1,36 @@
+.Table__itemCount {
+    /* margin-top: 10px; */
+    font-size: 18px;
+    border: solid 1px #45b3e3;
+    column-gap: 10px;
+    width: 500px;
+  }
+  
+  .Table__pagination {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 10px;
+    column-gap: 10px;
+    width: 350px;
+  }
+  
+  .Table__pageButton {
+    font-size: 20px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    border: solid 1px #45b3e3;
+    column-gap: 10px;
+  }
+  
+  .Table__pageButton:disabled {
+    cursor: not-allowed;
+    color: gray;
+  }
+  
+  .Table__pageButton--active {
+    color: #45b3e3;
+    font-weight: bold;
+  }
+  

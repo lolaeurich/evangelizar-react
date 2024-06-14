@@ -1,0 +1,593 @@
+.card-vela {
+    width: 395px;
+    height: 200px;
+    display: flex;
+    align-items: stretch;
+    border: solid 1px #1D9259;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    width: 70%;
+    height: auto;
+}
+
+.dados-vela {
+    display: flex;
+}
+
+.dados-img {
+    width: 44px;
+    height: 44px;
+}
+
+.card-titulo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+}
+
+.card-h5 {
+    color: #004926;
+    font-family: Lato;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    text-align: left;
+}
+
+.card-h4 {
+    color: #004926;
+    font-family: Lato;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: left;
+}
+
+.card-motivo {
+    color: #5B5E6D;
+    font-family: Lato;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: left;
+    max-width: 230px; /* Defina a largura máxima desejada */
+    word-wrap: break-word; /* Para que o texto quebre quando exceder a largura */
+    padding-left: 15px;
+}
+
+.card-acoes {
+    display: flex;
+    width: 85%;
+    justify-content: space-around; 
+}
+
+.editar-card {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+}
+
+.vela-edit-img {
+    width: 14px;
+    height: 14px;
+}
+
+.vela-edit-p {
+    color: #2C72DC;
+    font-family: Lato;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: left;
+    text-decoration: underline;
+}
+
+.excluir-card {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+}
+
+.card-switch {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+  
+.checkbox-switch { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 2px !important;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+
+  input:focus + .slider {
+    box-shadow: 0 0 1px #1D9259;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+
+  .legenda-switch {
+    color: #004926;
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: left;
+  }
+
+  .apagada {
+    filter: grayscale(100%);
+    /* Outros estilos para tornar o conteúdo cinza, como redução de opacidade ou mudança na cor */
+}
+
+.card-vela.apagada {
+    background-color: #F2F3F7;
+}
+
+
+
+
+
+@media screen and (max-width:1440px) {
+
+    .listar-duas {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 79px !important;
+      
+    }
+    .card-vela {
+        width: 640px;
+        height: 278px;
+        display: flex;
+        align-items: stretch;
+        border: solid 1px #1D9259;
+        border-radius: 10px;
+        padding: 15px;
+        margin-bottom: 25px;
+
+    }
+    
+    .card-info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        width: 70%;
+        height: auto;
+    }
+    
+    .dados-vela {
+        display: flex;
+    }
+    
+    .dados-img {
+        width: 44px;
+        height: 44px;
+    }
+    
+    .card-titulo {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between
+    }
+    
+    .card-h5 {
+        color: #004926;
+        font-family: Lato;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 14px;
+        text-align: left;
+    }
+    
+    .card-h4 {
+        color: #004926;
+        font-family: Lato;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 24px;
+        text-align: left;
+    }
+    
+    .card-motivo {
+        color: #5B5E6D;
+        font-family: Lato;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 22px;
+        text-align: left;
+        max-width: 230px; /* Defina a largura máxima desejada */
+        word-wrap: break-word; /* Para que o texto quebre quando exceder a largura */
+        padding-left: 15px;
+    }
+    
+    .card-acoes {
+        display: flex;
+        width: 85%;
+        justify-content: space-around; 
+    }
+    
+    .editar-card {
+        display: flex;
+        align-items: center;
+        column-gap: 5px;
+    }
+    
+    .vela-edit-img {
+        width: 14px;
+        height: 14px;
+    }
+    
+    .vela-edit-p {
+        color: #2C72DC;
+        font-family: Lato;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 22px;
+        text-align: left;
+        text-decoration: underline;
+    }
+    
+    .excluir-card {
+        display: flex;
+        align-items: center;
+        column-gap: 5px;
+    }
+    
+    .card-switch {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+    }
+      
+    .checkbox-switch { 
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+      
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
+      }
+      
+      .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 2px !important;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+      }
+      
+    
+      input:focus + .slider {
+        box-shadow: 0 0 1px #1D9259;
+      }
+      
+      input:checked + .slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+      }
+    
+      .legenda-switch {
+        color: #004926;
+        font-family: Lato;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 22px;
+        text-align: left;
+      }
+    
+      .apagada {
+        filter: grayscale(100%);
+        /* Outros estilos para tornar o conteúdo cinza, como redução de opacidade ou mudança na cor */
+    }
+    
+    .card-vela.apagada {
+        background-color: #F2F3F7;
+    }
+      
+    
+}
+
+
+
+@media screen and (max-width:1880px) {
+
+    .listar-duas {
+      padding-top: 290px;
+     margin-bottom: 80px;
+    }
+    .card-vela {
+        width: 600px !important;
+        height: 298px !important;
+        display: flex;
+        align-items: stretch;
+        border: solid 1px #1D9259;
+        border-radius: 10px;
+        padding: 15px;
+        margin-bottom: 25px;
+    }
+    
+    .card-info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        width: 70%;
+        height: auto;
+    }
+    
+    .dados-vela {
+        display: flex;
+        padding-left: 15px;
+    }
+    
+    .dados-img {
+        width: 44px;
+        height: 44px;
+    }
+    
+    .card-titulo {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        row-gap: 10px;
+    }
+    
+    .card-h5 {
+        color: #004926;
+        font-family: Lato;
+        font-size: 16px !important;
+        font-weight: 400;
+        line-height: 14px;
+        text-align: left;
+    }
+    
+    .card-h4 {
+        color: #004926;
+        font-family: Lato;
+        font-size: 24px !important;
+        font-weight: 700;
+        line-height: 24px;
+        text-align: left;
+    }
+    
+    .card-motivo {
+        color: #5B5E6D;
+        font-family: Lato;
+        font-size: 16px !important;
+        font-weight: 400;
+        line-height: 22px;
+        text-align: left;
+        max-width: 350px; /* Defina a largura máxima desejada */
+        word-wrap: break-word; /* Para que o texto quebre quando exceder a largura */
+        padding-left: 30px !important;
+    }
+    
+    .card-acoes {
+        display: flex;
+        width: 65%;
+        justify-content: space-around; 
+    }
+    
+    .editar-card {
+        display: flex;
+        align-items: center;
+        column-gap: 5px;
+    }
+    
+    .vela-edit-img {
+        width: 14px;
+        height: 14px;
+    }
+    
+    .vela-edit-p {
+        color: #2C72DC;
+        font-family: Lato;
+        font-size: 14px !important;
+        font-weight: 400;
+        line-height: 22px;
+        text-align: left;
+        text-decoration: underline;
+    }
+    
+    .excluir-card {
+        display: flex;
+        align-items: center;
+        column-gap: 5px;
+    }
+    
+    .card-switch {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+    }
+      
+    .checkbox-switch { 
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+      
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
+      }
+      
+      .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 2px !important;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+      }
+      
+    
+      input:focus + .slider {
+        box-shadow: 0 0 1px #1D9259;
+      }
+      
+      input:checked + .slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+      }
+    
+      .legenda-switch {
+        color: #004926;
+        font-family: Lato;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 22px;
+        text-align: left;
+      }
+    
+      .apagada {
+        filter: grayscale(100%);
+        /* Outros estilos para tornar o conteúdo cinza, como redução de opacidade ou mudança na cor */
+    }
+    
+    .card-vela.apagada {
+        background-color: #F2F3F7;
+    }
+      
+    
+}
+  
+
+/* Estilo para o overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo semi-transparente */
+    z-index: 1000; /* Garante que o overlay esteja acima de todo o conteúdo */
+}
+
+.popup-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1001; /* Garante que a popup esteja acima do overlay */
+    max-height: 80%; /* Defina a altura máxima para a popup */
+    overflow-y: auto; /* Adicione uma barra de rolagem vertical quando necessário */
+    padding-left: 200px;
+}
+
+.popup {
+    position: relative;
+    width: 600px;
+}
+
+.fechar-popup {
+    position: absolute;
+    top: -20px;
+    right: 10px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 32px;
+    color: #555;
+}
+
+/* Estilo para a segunda popup (opcional, caso deseje) */
+.popup2 {
+    /* Adicione os estilos necessários */
+}

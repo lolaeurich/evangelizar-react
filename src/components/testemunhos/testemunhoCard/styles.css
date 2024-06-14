@@ -1,0 +1,167 @@
+.card-vela {
+    width: 395px;
+    height: 200px;
+    display: flex;
+    align-items: stretch;
+    border: solid 1px #1D9259;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    width: 70%;
+    height: auto;
+}
+
+.dados-vela {
+    display: flex;
+}
+
+.dados-img {
+    width: 44px;
+    height: 44px;
+}
+
+.card-titulo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+}
+
+.card-h5 {
+    color: #004926;
+    font-family: Lato;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    text-align: left;
+}
+
+.card-h4 {
+    color: #004926;
+    font-family: Lato;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: left;
+}
+
+.card-motivo {
+    color: #5B5E6D;
+    font-family: Lato;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: left;
+    max-width: 400px; /* Defina a largura máxima desejada */
+    word-wrap: break-word; /* Para que o texto quebre quando exceder a largura */
+    padding-left: 15px;
+}
+
+.card-acoes {
+    display: flex;
+    width: 85%;
+    justify-content: space-around; 
+}
+
+.editar-card {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+}
+
+.vela-edit-img {
+    width: 14px;
+    height: 14px;
+}
+
+.vela-edit-p {
+    color: #2C72DC;
+    font-family: Lato;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: left;
+    text-decoration: underline;
+}
+
+.excluir-card {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+}
+
+.card-switch {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+  
+.checkbox-switch { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 2px !important;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+
+  input:focus + .slider {
+    box-shadow: 0 0 1px #1D9259;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+
+  .legenda-switch {
+    color: #004926;
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: left;
+  }
+
+  .apagada {
+    filter: grayscale(100%);
+    /* Outros estilos para tornar o conteúdo cinza, como redução de opacidade ou mudança na cor */
+}
+  

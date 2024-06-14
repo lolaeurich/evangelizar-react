@@ -1,0 +1,268 @@
+.acenderVela1 {
+    width: 60%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: 25px;
+        row-gap: 5px;
+        align-items: baseline;
+        justify-content: center;
+}
+
+.inputvela-select {
+    width: 430px;
+    max-width: 100%; /* Define a largura máxima igual à largura do campo de seleção */
+    height: 44px;
+    background-color: transparent;
+    border: 1px solid #A1A1A1;
+    overflow: hidden;
+    word-break: break-word;
+}
+
+.option {
+    width: 430px;
+}
+
+.inputvela-motivo {
+    background-color: transparent;
+    border: 1px solid #A1A1A1;
+    width: 430px;
+    height: 140px;
+    padding-left: 15px;
+    padding-bottom: 110px;
+    word-wrap: break-word;
+}
+
+.topping-test {
+    margin-top: 0.3rem;
+        vertical-align: text-bottom;
+        -moz-column-gap: 10px;
+        column-gap: 10px;
+        color: #5b5e6d;
+        font-family: Lato;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        text-align: left;
+        width: 100%;
+}
+
+.atencao1 {
+    display: flex;
+    font-family: Lato;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: left;
+    color: #5b5e6d;
+    -moz-column-gap: 10px;
+    column-gap: 10px;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.btn-vela-form {
+    width: 183px;
+    height: 44px;
+    border-radius: 2px;
+    background-color: #2C72DC;
+    color: #fff;
+    font-family: Lato;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 25px;
+    align-self: flex-start;
+    margin-left: 0px;
+    cursor: pointer;
+}
+
+.add-h3-test {
+   color: #1D1D1B;
+font-family: Lato;
+font-size: 32px;
+font-weight: 700;
+line-height: 38px;
+text-align: left;
+
+}
+
+
+@media screen and (min-width: 1440px) {
+
+    .acenderVela1 {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        font-size: column;
+        margin: 25px;
+        row-gap: 5px;
+        align-items: center;
+        justify-content: center;
+    }
+    .add-h3-test {
+        padding-right: 89px;
+    }
+    .inputvela-select {
+    width: 487px;
+    height: 54px;
+    max-width: 100%;
+    }
+
+    .inputvela-motivo {
+        width: 487px;
+    }
+
+    .topping-test {
+        margin-top: 0.3rem;
+            vertical-align: text-bottom;
+            -moz-column-gap: 10px;
+            column-gap: 10px;
+            color: #5b5e6d;
+            font-family: Lato;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            text-align: left;
+            width: 75%;
+    }
+
+    .atencao-test {
+        display: flex;
+        font-family: Lato;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 22px;
+        text-align: left;
+        color: #5b5e6d;
+        -moz-column-gap: 10px;
+        column-gap: 10px;
+        margin-top: 15px;
+        width: 80%;
+    }
+
+    .btn-vela-form {
+        width: 183px;
+        height: 44px;
+        border-radius: 2px;
+        background-color: #2C72DC;
+        color: #fff;
+        font-family: Lato;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 20px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-top: 25px;
+        align-self: flex-start;
+        margin-left: 100px;
+        cursor: pointer;
+    }
+}
+
+
+@media screen and (min-width: 1880px) {
+
+    .acenderVela1 {
+        width: 60%;
+        height: 100%;
+        display: flex;
+        font-size: column;
+            margin: 25px;
+            row-gap: 5px;
+            justify-content: center;
+    }
+    .add-h3-test {
+        padding-right: 89px !important;
+    }
+    .inputvela-select {
+    width: 487px;
+    height: 54px;
+    max-width: 100% !important;
+    }
+
+    .option {
+        width: 400px;
+    }
+    .inputvela-motivo {
+        width: 487px;
+    }
+
+    .topping-test {
+        margin-top: 0.3rem;
+            vertical-align: text-bottom;
+            -moz-column-gap: 10px;
+            column-gap: 10px;
+            color: #5b5e6d;
+            font-family: Lato;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+            text-align: left;
+            width: 55%;
+            padding-left: 8px;
+    }
+
+    .atencao-test {
+        display: flex;
+        font-family: Lato;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 22px;
+        text-align: left;
+        color: #5b5e6d;
+        -moz-column-gap: 10px;
+        column-gap: 10px;
+        margin-top: 15px;
+        width: 70%;
+        padding-left: 75px;
+    }
+
+    .btn-testemunho {
+        width: 235px;
+        height: 44px;
+        border-radius: 2px;
+        background-color: #2C72DC;
+        color: #fff;
+        font-family: Lato;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 20px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-top: 25px;
+        align-self: flex-start;
+        margin-left: 220px;
+        cursor: pointer;
+    }
+
+
+    .btn-vela-form {
+        width: 183px;
+        height: 44px;
+        border-radius: 2px;
+        background-color: #2C72DC;
+        color: #fff;
+        font-family: Lato;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 20px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-top: 25px;
+        align-self: flex-start;
+        margin-left: 250px;
+        cursor: pointer;
+    }
+}
+
