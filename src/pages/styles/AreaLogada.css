@@ -656,6 +656,88 @@ html, body {
 }
 
 
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 700px;
+    position: absolute;
+    top: 125px;
+    left: 90px;
+    background-color: #fff; /* Cor de fundo do dropdown */
+    border: 1px solid #ccc; /* Borda do dropdown */
+    z-index: 999; /* Certifique-se de que o dropdown esteja acima de outros elementos */
+  }
+  
+  .dropdown ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    row-gap: 10px;
+  }
+  
+  .dropdown ul li {
+  
+    cursor: pointer;
+    font-size: 24px;
+    color: #38603D;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 50px;
+    margin-bottom: 25px;
+    cursor: pointer;
+  }
+  
+  .dropdown ul li:hover {
+    background-color: #f0f0f0; /* Cor de fundo quando hover */
+  }
+  
+  /* Estilo para o menu sanduíche */
+  .menu-sanduiche {
+    cursor: pointer;
+  }
+  
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #000; /* Cor das barras do menu sanduíche */
+    margin: 4px 0;
+  }
+
+  .donation-drop {
+    width: 360px;
+    height: 77px;
+    border-radius: 2px;
+    background-color: #004926;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 50px;
+  }
+
+  .donation-drop img {
+    width: 40px;
+    height: 40px;
+  }
+  .donation-drop span {
+   font-size: 24px;
+  }
+
+  .linha-drop {
+    width: 100%;
+    border-bottom: 1px solid #004926;
+    margin-bottom: 25px;
+  }
+
 
 /*PRINCIPAL*/
 @media screen and (min-width: 1440px) {

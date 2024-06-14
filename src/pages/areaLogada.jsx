@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import "./styles/AreaLogada.css"
 import logo from "../assets/Home/logo.svg"
 import heart from "../assets/Home/heart.png"
@@ -21,12 +21,46 @@ import jornal from "../assets/areaLogada/jornal.png"
 import { useNavigate } from "react-router-dom";
 
 function AreaLogada () {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-    let navigate = useNavigate(); 
-    const routeChange = () =>{ 
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
+  const handleHomeClick = () => {
+    // Redirecionar para a página inicial do site
+    window.location.href = "/AreaLogada";
+  };
+
+
+    let navigateVela = useNavigate(); 
+    const routeChangeVela = () =>{ 
       let path = `/MinhasVelas`; 
-      navigate(path);
+      navigateVela(path);
     }
+
+    let navigateTest = useNavigate(); 
+    const routeChangeTest = () =>{ 
+      let path = `/MeusTestemunhos`; 
+      navigateTest(path);
+    }
+
+    let navigateRevista = useNavigate(); 
+    const routeChangeRevista = () =>{ 
+      let path = `/VerRevista`; 
+      navigateRevista(path);
+    }
+
+    let navigateJornal = useNavigate(); 
+    const routeChangeJornal = () =>{ 
+      let path = `/VerJornal`; 
+      navigateJornal(path);
+    }
+
+
+
+
+
 
     let navigate2 = useNavigate(); 
     const routeChange2 = () =>{ 
@@ -76,7 +110,7 @@ function AreaLogada () {
       {/* MENU SUPERIOR */}
       <div className="nav">
             <div className="menu-superior">
-                <div className="menu-sanduiche">
+                <div className="menu-sanduiche" onClick={toggleDropdown}>
                     <div className="bar"></div>
                     <div className="bar"></div>
                     <div className="bar"></div>
@@ -84,7 +118,28 @@ function AreaLogada () {
                 <img className="menu-superior-img" alt="" src={logo}/>
                 <h4 className="menu-superior-h4">Área Restrita</h4>
             </div>  
-            <img className="lupa" alt="" src={lupa}/>  
+            <img className="lupa" alt="" src={lupa}/> 
+            {isDropdownOpen && (
+          <div className="dropdown">
+              <ul>
+                <li onClick={routeChangeVela}>Minhas Velas<img alt="" src={arrow} onClick={routeChangeVela}/></li>
+                <hr className="linha-drop" />
+                <li onClick={routeChangeTest}>Meus Testemunhos<img alt="" src={arrow}/></li>
+                <hr className="linha-drop" />
+                <li onClick={routeChangeRevista}>Revista Turma do Manzottinho<img alt="" src={arrow}/></li>
+                <hr className="linha-drop" />
+                <li onClick={routeChangeJornal}>Jornal do Evangelizador<img alt="" src={arrow}/></li>
+                <hr className="linha-drop" />
+                <li onClick={handleHomeClick}>Retornar para a página inicial<img alt="" src={arrow}/></li>
+                <hr className="linha-drop" />
+                <button className="donation-drop" onClick={handleButtonClick} href="https://doar.evangelizarepreciso.com.br/doacoes-site">
+                      <img className="span-btn" alt="" src={heart} />
+                      <span>Faça sua doação</span>
+                </button>
+                  {/* Adicione mais itens do menu aqui, se necessário */}
+              </ul>
+          </div>
+        )} 
         </div>   
 
       {/*BANNER*/}   
@@ -132,7 +187,7 @@ function AreaLogada () {
                             <h3 className="vela-h3">Minhas Velas</h3>
                             <p className="vela-p">Edite aqui suas informações de perfil, complete seu cadastro ou cadastre novos usuários mirins</p>
                         </div>
-                    <img alt="" className="arrow" src={blueArrow} onClick={routeChange}/>
+                    <img alt="" className="arrow" src={blueArrow} onClick={routeChangeVela}/>
                 </div>
                 <div className="quadro2">
                     <img alt="" className="livro" src={livro}/>

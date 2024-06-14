@@ -25,6 +25,41 @@ import ListaVelas from '../components/velas/listVelas/listVelas'
 import { VelasProvider } from '../components/velas/context/velas';
 
 function MinhasVelas () {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
+  const handleHomeClick = () => {
+    // Redirecionar para a página inicial do site
+    window.location.href = "/AreaLogada";
+  };
+
+
+    let navigateVela = useNavigate(); 
+    const routeChangeVela = () =>{ 
+      let path = `/MinhasVelas`; 
+      navigateVela(path);
+    }
+
+    let navigateTest = useNavigate(); 
+    const routeChangeTest = () =>{ 
+      let path = `/MeusTestemunhos`; 
+      navigateTest(path);
+    }
+
+    let navigateRevista = useNavigate(); 
+    const routeChangeRevista = () =>{ 
+      let path = `/VerRevista`; 
+      navigateRevista(path);
+    }
+
+    let navigateJornal = useNavigate(); 
+    const routeChangeJornal = () =>{ 
+      let path = `/VerJornal`; 
+      navigateJornal(path);
+    }
     const [titulo, setTitulo] = useState("")
     //todo: ver motivo usando select.
     const [cidade, setCidade] = useState("")
@@ -86,19 +121,40 @@ function MinhasVelas () {
                 </ul>
             </div>
 
-             {/* MENU SUPERIOR */}
-             <div className="nav">
-                    <div className="menu-superior">
-                        <div className="menu-sanduiche">
-                            <div className="bar"></div>
-                            <div className="bar"></div>
-                            <div className="bar"></div>
-                        </div>
-                        <img className="menu-superior-img" alt="" src={logo}/>
-                        <h4 className="menu-superior-h4">Área Restrita</h4>
-                    </div>  
-                    <img className="lupa" alt="" src={lupa}/>  
-            </div>
+              {/* MENU SUPERIOR */}
+      <div className="nav">
+            <div className="menu-superior">
+                <div className="menu-sanduiche" onClick={toggleDropdown}>
+                    <div className="bar"></div>
+                    <div className="bar"></div>
+                    <div className="bar"></div>
+                </div>
+                <img className="menu-superior-img" alt="" src={logo}/>
+                <h4 className="menu-superior-h4">Área Restrita</h4>
+            </div>  
+            <img className="lupa" alt="" src={lupa}/> 
+            {isDropdownOpen && (
+          <div className="dropdown">
+              <ul>
+                <li onClick={routeChangeVela}>Minhas Velas<img alt="" src={arrow} onClick={routeChangeVela}/></li>
+                <hr className="linha-drop" />
+                <li onClick={routeChangeTest}>Meus Testemunhos<img alt="" src={arrow}/></li>
+                <hr className="linha-drop" />
+                <li onClick={routeChangeRevista}>Revista Turma do Manzottinho<img alt="" src={arrow}/></li>
+                <hr className="linha-drop" />
+                <li onClick={routeChangeJornal}>Jornal do Evangelizador<img alt="" src={arrow}/></li>
+                <hr className="linha-drop" />
+                <li onClick={handleHomeClick}>Retornar para a página inicial<img alt="" src={arrow}/></li>
+                <hr className="linha-drop" />
+                <button className="donation-drop" onClick={handleButtonClick} href="https://doar.evangelizarepreciso.com.br/doacoes-site">
+                      <img className="span-btn" alt="" src={heart} />
+                      <span>Faça sua doação</span>
+                </button>
+                  {/* Adicione mais itens do menu aqui, se necessário */}
+              </ul>
+          </div>
+        )} 
+        </div>   
 
             {/* BANNER */}
             <div className="velas-banner">

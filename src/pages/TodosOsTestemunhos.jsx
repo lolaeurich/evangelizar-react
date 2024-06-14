@@ -27,7 +27,49 @@ import { TestemunhosProvider } from '../components/testemunhos/context/testemunh
 import Pagination from "../components/Paginacao/paginacao.jsx"
 import axios from 'axios'; // Importe o axios se você não o fez ainda
 
+import { useNavigate } from "react-router-dom";
+
 function TodosOsTestemunhos () {
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
+  const handleButtonClick = () => {
+    // Redireciona para o site desejado quando o botão é clicado
+    window.location.href = 'https://doar.evangelizarepreciso.com.br/doacoes-site';
+};
+
+  const handleHomeClick = () => {
+    // Redirecionar para a página inicial do site
+    window.location.href = "/AreaLogada";
+  };
+
+
+    let navigateVela = useNavigate(); 
+    const routeChangeVela = () =>{ 
+      let path = `/MinhasVelas`; 
+      navigateVela(path);
+    }
+
+    let navigateTest = useNavigate(); 
+    const routeChangeTest = () =>{ 
+      let path = `/MeusTestemunhos`; 
+      navigateTest(path);
+    }
+
+    let navigateRevista = useNavigate(); 
+    const routeChangeRevista = () =>{ 
+      let path = `/VerRevista`; 
+      navigateRevista(path);
+    }
+
+    let navigateJornal = useNavigate(); 
+    const routeChangeJornal = () =>{ 
+      let path = `/VerJornal`; 
+      navigateJornal(path);
+    }
 
     const { testemunhos } = useContext(TestemunhosContext);
     const [showEditPopup, setShowEditPopup] = useState(false);
@@ -100,19 +142,40 @@ function TodosOsTestemunhos () {
                 </ul>
             </div>
 
-            {/* MENU SUPERIOR */}
-            <div className="nav">
-                    <div class="menu-superior">
-                        <div className="menu-sanduiche">
-                            <div className="bar"></div>
-                            <div className="bar"></div>
-                            <div className="bar"></div>
-                        </div>
-                        <img className="menu-superior-img" alt="" src={logo}/>
-                        <h4 className="menu-superior-h4">Área Restrita</h4>
-                    </div>  
-                    <img className="lupa" alt="" src={lupa}/>  
-            </div>
+          {/* MENU SUPERIOR */}
+      <div className="nav">
+            <div className="menu-superior">
+                <div className="menu-sanduiche" onClick={toggleDropdown}>
+                    <div className="bar"></div>
+                    <div className="bar"></div>
+                    <div className="bar"></div>
+                </div>
+                <img className="menu-superior-img" alt="" src={logo}/>
+                <h4 className="menu-superior-h4">Área Restrita</h4>
+            </div>  
+            <img className="lupa" alt="" src={lupa}/> 
+            {isDropdownOpen && (
+          <div className="dropdown">
+              <ul>
+                <li onClick={routeChangeVela}>Minhas Velas<img alt="" src={arrow} onClick={routeChangeVela}/></li>
+                <hr className="linha-drop" />
+                <li onClick={routeChangeTest}>Meus Testemunhos<img alt="" src={arrow}/></li>
+                <hr className="linha-drop" />
+                <li onClick={routeChangeRevista}>Revista Turma do Manzottinho<img alt="" src={arrow}/></li>
+                <hr className="linha-drop" />
+                <li onClick={routeChangeJornal}>Jornal do Evangelizador<img alt="" src={arrow}/></li>
+                <hr className="linha-drop" />
+                <li onClick={handleHomeClick}>Retornar para a página inicial<img alt="" src={arrow}/></li>
+                <hr className="linha-drop" />
+                <button className="donation-drop" onClick={handleButtonClick} href="https://doar.evangelizarepreciso.com.br/doacoes-site">
+                      <img className="span-btn" alt="" src={heart} />
+                      <span>Faça sua doação</span>
+                </button>
+                  {/* Adicione mais itens do menu aqui, se necessário */}
+              </ul>
+          </div>
+        )} 
+        </div>   
 
             {/* BANNER */}
             <div className="velas-banner">
@@ -133,7 +196,7 @@ function TodosOsTestemunhos () {
                         {/* <button onClick={handleCloseEditPopup} className="fechar-vela">x</button> */}
                         <h2 className="edit-pop">Editar informações do testemunho</h2>
 
-                        <h3 className="acender-h3">CRiar novo testemunho</h3>
+                        <h3 className="acender-h3">Criar novo testemunho</h3>
                         {/* <form className="edit-vela-form">
                         <div className="titulo">
                             <label className="vela-label">TÍTULO</label>
@@ -227,11 +290,10 @@ function TodosOsTestemunhos () {
                 </div>
                 <div className="velas-paginas">
                     <button className="velas-exc-btn" onClick={goToPreviousPage} disabled={currentPage === 1}>
-                        Ver testemunhos excluídos                   </button>
-                    <Pagination />   
-                    {/* <button className="velas-exc-btn" onClick={goToNextPage} disabled={currentPage === totalPages}  style={{width:"50px"}}>
+                        Ver testemunhos expirados                 </button>
+                    <button className="velas-exc-btn" onClick={goToNextPage} disabled={currentPage === totalPages}  style={{width:"50px"}}>
                         1
-                    </button> */}
+                    </button>
                 </div>
             </div>
 

@@ -23,6 +23,7 @@ import pag21 from "../../assets/Jornais/Jornal3/21.jpg"
 import pag22 from "../../assets/Jornais/Jornal3/22.jpg"
 import pag23 from "../../assets/Jornais/Jornal3/23.jpg"
 import pag24 from "../../assets/Jornais/Jornal3/24.jpg"
+import heart from "../../assets/Home/heart.png"
 
 
 import logo from "../../assets/Home/logo.svg"
@@ -41,8 +42,52 @@ import eye from "../../assets/Home/eye.png"
 import React, {useState} from "react";
 
 import "../Revistas/revistas.css"
+import { useNavigate } from "react-router-dom";
 
 function MyJornal3(props) {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
+  const handleHomeClick = () => {
+    // Redirecionar para a página inicial do site
+    window.location.href = "/AreaLogada";
+  };
+
+
+    let navigateVela = useNavigate(); 
+    const routeChangeVela = () =>{ 
+      let path = `/MinhasVelas`; 
+      navigateVela(path);
+    }
+
+    let navigateTest = useNavigate(); 
+    const routeChangeTest = () =>{ 
+      let path = `/MeusTestemunhos`; 
+      navigateTest(path);
+    }
+
+    let navigateRevista = useNavigate(); 
+    const routeChangeRevista = () =>{ 
+      let path = `/VerRevista`; 
+      navigateRevista(path);
+    }
+
+    let navigateJornal = useNavigate(); 
+    const routeChangeJornal = () =>{ 
+      let path = `/VerJornal`; 
+      navigateJornal(path);
+    }
+
+    const handleButtonClick = () => {
+      // Redireciona para o site desejado quando o botão é clicado
+      window.location.href = 'https://doar.evangelizarepreciso.com.br/doacoes-site';
+  };
+
+
+
   const [currentPage, setCurrentPage] = useState(1);
   const pageStyle = {
     display: "flex",
@@ -78,18 +123,39 @@ function MyJornal3(props) {
     </div>
 
     {/* MENU SUPERIOR */}
-    <div class="nav">
-            <div class="menu-superior">
-                <div class="menu-sanduiche">
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                    <div class="bar"></div>
+      <div className="nav">
+            <div className="menu-superior">
+                <div className="menu-sanduiche" onClick={toggleDropdown}>
+                    <div className="bar"></div>
+                    <div className="bar"></div>
+                    <div className="bar"></div>
                 </div>
-                <img class="menu-superior-img" alt="" src={logo}/>
-                <h4 class="menu-superior-h4">Área Restrita</h4>
+                <img className="menu-superior-img" alt="" src={logo}/>
+                <h4 className="menu-superior-h4">Área Restrita</h4>
             </div>  
-            <img class="lupa" alt="" src={lupa}/>  
-    </div>
+            <img className="lupa" alt="" src={lupa}/> 
+            {isDropdownOpen && (
+          <div className="dropdown">
+              <ul>
+                <li onClick={routeChangeVela}>Minhas Velas<img alt="" src={arrow} onClick={routeChangeVela}/></li>
+                <hr className="linha-drop" />
+                <li onClick={routeChangeTest}>Meus Testemunhos<img alt="" src={arrow}/></li>
+                <hr className="linha-drop" />
+                <li onClick={routeChangeRevista}>Revista Turma do Manzottinho<img alt="" src={arrow}/></li>
+                <hr className="linha-drop" />
+                <li onClick={routeChangeJornal}>Jornal do Evangelizador<img alt="" src={arrow}/></li>
+                <hr className="linha-drop" />
+                <li onClick={handleHomeClick}>Retornar para a página inicial<img alt="" src={arrow}/></li>
+                <hr className="linha-drop" />
+                <button className="donation-drop" onClick={handleButtonClick} href="https://doar.evangelizarepreciso.com.br/doacoes-site">
+                      <img className="span-btn" alt="" src={heart} />
+                      <span>Faça sua doação</span>
+                </button>
+                  {/* Adicione mais itens do menu aqui, se necessário */}
+              </ul>
+          </div>
+        )} 
+        </div>   
 
        {/* BANNER */}
     <div className='revista-main'>

@@ -49,7 +49,7 @@ function Home() {
 
       navigate("/areaLogada")
     } catch (error) {
-      setError("Login ou senha incorretos."); // Define a mensagem de erro
+      setError("Login ou senha incorretos!"); // Define a mensagem de erro
     }
   }
 
