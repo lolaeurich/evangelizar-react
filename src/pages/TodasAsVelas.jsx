@@ -233,7 +233,7 @@ function TodasAsVelas () {
                 </div>
                 <div className="velas-paginas">
                     <button className="velas-exc-btn" onClick={goToPreviousPage} disabled={currentPage === 1}>
-                        Ver todas as velas excluídas                   </button>
+                        Ver todas as velas apagadas                   </button>
                     <button className="velas-exc-btn" onClick={goToNextPage} disabled={currentPage === totalPages}  style={{width:"50px"}}>
                         1
                     </button>

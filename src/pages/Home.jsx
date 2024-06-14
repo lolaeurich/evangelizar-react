@@ -27,48 +27,47 @@ function Home() {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [showPassword, setShowPassword] = useState(false);
+  const [error, setError] = useState(null); // Estado para controlar o erro
 
   const handleLogin = async () => {
-    const payload = {
-      email,
-      password,
-      associado: true
+    try {
+      const payload = {
+        email,
+        password,
+        associado: true
+      }
+
+      const response = await axios.post('https://arearestritaevangelizar.belogic.com.br/api/login', payload)
+      const { token } = response.data.authorization 
+
+      //todo: armazenar token.
+      localStorage.clear()
+      localStorage.setItem('token', token)
+
+      setEmail("")
+      setPassword("")
+
+      navigate("/areaLogada")
+    } catch (error) {
+      setError("Login ou senha incorretos."); // Define a mensagem de erro
     }
-
-    const response = await axios.post('https://arearestritaevangelizar.belogic.com.br/api/login', payload)
-    const { token } = response.data.authorization 
-    
-    //todo: armazenar token.
-    localStorage.clear()
-    localStorage.setItem('token', token)
-
-    setEmail("")
-    setPassword("")
-
-    navigate("/areaLogada")
-    
-    setEmail("")
-    setPassword("")
-
-    navigate("/areaLogada")
   }
 
-  let navigate = useNavigate(); 
-  const routeChange = () =>{ 
-    let path = `/areaLogada`; 
-    navigate(path);
-  }
+  const navigate = useNavigate(); 
 
-    const handleButtonClick = () => {
+  const handleButtonClick = () => {
     // Redireciona para o site desejado quando o botão é clicado
     window.location.href = 'https://doar.evangelizarepreciso.com.br/doacoes-site';
-};
+  };
 
-const togglePasswordVisibility = () => {
-  setShowPassword(!showPassword);
-};
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
 
-
+  const navigateToPage = (page) => {
+    // Implemente a navegação para a página desejada aqui
+    console.log("Navegar para:", page);
+  };
 
   return (
     <div>
@@ -149,6 +148,15 @@ const togglePasswordVisibility = () => {
       </div>
 
       {/*MAIN*/}
+
+       {/* Se houver um erro, exibe a popup */}
+       {error && (
+        <div className="popup-home">
+          <p>{error}</p>
+          <button onClick={() => setError(null)}>Fechar</button>
+        </div>
+      )}
+
        <div className='principal'>
           <div className='entrar2'>
             <h3 className='h3'>Entrar</h3>

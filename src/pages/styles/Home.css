@@ -28,6 +28,46 @@ html, body {
     display: none;
 }
 
+.popup-home {
+    width: 500px;
+    height: 300px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    border-radius: 5px;
+    box-shadow: 0 11px 40px rgba(0, 0, 0, 0.2);
+    row-gap: 15px;
+    z-index: 9999; /* Garante que a popup esteja acima de outros elementos */
+  }
+  
+  .popup-home p {
+    margin-bottom: 30px;
+    font-size: 32px;
+    font-family: Lato;
+    font-weight: 700;
+    text-align: center;
+    padding-top: 60px;
+  }
+  
+  .popup-home button {
+    padding: 8px 16px;
+    background-color: #2C72DC;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 28px;
+    margin-left: 170px;
+  }
+  
+  .popup-home button:hover {
+    background-color: #165BBB;
+  }
+
 
 
 

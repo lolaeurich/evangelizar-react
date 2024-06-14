@@ -51,6 +51,11 @@ function AreaLogada () {
       window.location.href = 'https://doar.evangelizarepreciso.com.br/doacoes-site';
   };
 
+  const handleButtonClick2 = () => {
+    // Redireciona para o site desejado quando o botão é clicado
+    window.location.href = 'https://evangelizar-minha-conta.belogic.com.br/login';
+};
+
     return(
     <div>
       {/* BARRA SUPERIOR */}
@@ -104,7 +109,7 @@ function AreaLogada () {
                         <h3 className="perfil-h3">Minha conta</h3>
                     </div>
                     <p className="parte1-p">Edite aqui suas informações de perfil, complete seu cadastro ou cadastre novos usuários mirins</p>
-                    <button className="parte1-btn" onClick={() => navigateToPage('doacoes.html')}>
+                    <button className="parte1-btn" onClick={handleButtonClick2}>
                         <span>Site minha conta</span>
                         <img className="span-btn2" alt="" src={blueArrow} />
                     </button>
