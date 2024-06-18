@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import "./styles/VerRevista.css"
 import logo from "../assets/Home/logo.svg"
 import heart from "../assets/Home/heart.png"
@@ -31,6 +31,25 @@ import pag3 from "../assets/Jornais/Jornal3/1.jpg"
 
 function VerJornal () {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [jornais, setJornais] = useState([]);
+
+  useEffect(() => {
+    fetchDadosJornal();
+  }, []);
+
+  const fetchDadosJornal = async () => {
+    try {
+      const response = await fetch("https://arearestritaevangelizar.belogic.com.br/api/jornal");
+      if (!response.ok) {
+        throw new Error(`Erro ao buscar dados da API: ${response.status} ${response.statusText}`);
+      }
+      const data = await response.json();
+      setJornais(data.data); // Assumindo que os dados relevantes estão em data.data conforme exemplo da API
+    } catch (error) {
+      console.error('Erro na requisição:', error);
+      // Aqui você pode definir como deseja tratar o erro (ex: exibir uma mensagem para o usuário)
+    }
+  };
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
@@ -164,36 +183,19 @@ function VerJornal () {
             </div>
 
             <div className='vitrine-revistas'>
-              <div className='so-revistas'>
-                <div className='revista-solo'>
-                  <img alt='revista11' className='revista1' src={pag1}/>
-                  <p className='revista-legenda'>Abril 2024 - edição n° 199</p>
-                  <button className="btn-ver-revista2" onClick={routeChange9}>
-                      <img className="btn-ver-revista-icon" alt="" src={eye} />
-                      <p>Visualizar</p>
-                  </button>
-                </div>  
-
-                <div className='revista-solo'>
-                <img alt='revista1' className='revista1' src={pag2}/>
-                  <p className='revista-legenda'>Maio 2024 - edição n° 44</p>
-                  <button className="btn-ver-revista2" onClick={routeChange10}>
-                      <img className="btn-ver-revista-icon" alt="" src={eye} />
-                      <p>Visualizar</p>
-                  </button>
-                </div> 
-
-                <div className='revista-solo'>
-                <img alt='revista1' className='revista1' src={pag3} />
-                  <p className='revista-legenda'>Junho 2024 - edição n° 45</p>
-                  <button className="btn-ver-revista2" onClick={routeChange11}>
-                      <img className="btn-ver-revista-icon" alt="" src={eye} />
-                      <p>Visualizar</p>
-                  </button>
-                </div> 
-               
-              </div>
+        <div className='so-revistas'>
+          {jornais.map(jornal => (
+            <div key={jornal.id} className='revista-solo'>
+              <img alt={`Capa do Jornal - ${jornal.edicao}`} className='revista1' src={jornal.imagem_capa}/>
+              <p className='revista-legenda'>{jornal.lancamento} - {jornal.edicao}</p>
+              <button className="btn-ver-revista2" onClick={routeChange9}>
+                <img className="btn-ver-revista-icon" alt="" src={eye} />
+                <p>Visualizar</p>
+              </button>
             </div>
+          ))}
+        </div>
+      </div>
 
 
 
