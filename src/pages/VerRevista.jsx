@@ -101,7 +101,7 @@ function VerRevista () {
                 <li className="barra-text">Rádio Evangelizar</li>
                 <li className="barra-text">Jesus das Santas Chagas</li>
                 <li className="barra-text">Turma do Manzottinho</li>
-                <li className="barra-text">Produtos que Evangelizam</li>
+                <li className="barra-text">Produtos Que Evangelizam</li>
                 </ul>
             </div>
 
@@ -145,7 +145,7 @@ function VerRevista () {
                 <div className='revista-text'>
                     <img alt='revista' className='icon-revista' src={revista} />
                     <h2 className='revista-h2'>Revista Turma do Manzottinho</h2>
-                    <p className='revista-para'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam blandit placerat iaculis. Fusce fermentum nisi et finibus tincidunt. Maecenas nec orci at velit commodo convallis sit amet eget mauris. Phasellus mattis dui vitae egestas feugiat. Pellentesque posuere porttitor purus eget volutpat. Phasellus ligula enim, venenatis in condimentum quis, tincidunt quis turpis.</p>
+                    <p className='revista-para'>Pensada para crianças e adolescentes, a revista da Turma do Manzottinho é repleta de ensinamentos baseados nos valores cristãos, curiosidades, passatempos, história em quadrinhos, receitinha e muito mais. Embarque nessa aventura e divirta-se com a Turminha mais legal da paróquia!</p>
                     <button className="btn-revista" >
                         <span>Ver as edições da revista</span>
                         <img className="arrow2" alt="" src={arrow2} />

@@ -102,7 +102,7 @@ function VerJornal () {
                 <li className="barra-text">Rádio Evangelizar</li>
                 <li className="barra-text">Jesus das Santas Chagas</li>
                 <li className="barra-text">Turma do Manzottinho</li>
-                <li className="barra-text">Produtos que Evangelizam</li>
+                <li className="barra-text">Produtos Que Evangelizam</li>
                 </ul>
             </div>
 
@@ -146,7 +146,7 @@ function VerJornal () {
                 <div className='revista-text'>
                     <img alt='revista' className='icon-revista' src={revista} />
                     <h2 className='revista-h2'>Jornal do Evangelizador</h2>
-                    <p className='revista-para'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam blandit placerat iaculis. Fusce fermentum nisi et finibus tincidunt. Maecenas nec orci at velit commodo convallis sit amet eget mauris. Phasellus mattis dui vitae egestas feugiat. Pellentesque posuere porttitor purus eget volutpat. Phasellus ligula enim, venenatis in condimentum quis, tincidunt quis turpis.</p>
+                    <p className='revista-para'>Publicação mensal enviada como benefício aos associados. Aborda temas para toda família e estimula a fé católica por meio de artigos do Padre Reginaldo Manzotti e outros religiosos, matérias sobre assuntos seculares e da Igreja, textos sobre os Santos, histórias de superação por meio da fé, orientações sobre a vida cristã, novidades e prestações de contas. É possível ouvir o Jornal do Evangelizador em áudio pelo aplicativo da Associação Evangelizar É Preciso.</p>
                     <button className="btn-revista" >
                         <span>Ver as edições do jornal</span>
                         <img className="arrow2" alt="" src={arrow2} />

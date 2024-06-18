@@ -113,7 +113,7 @@ function MyBook2(props) {
         <li className="barra-text">Rádio Evangelizar</li>
         <li className="barra-text">Jesus das Santas Chagas</li>
         <li className="barra-text">Turma do Manzottinho</li>
-        <li className="barra-text">Produtos que Evangelizam</li>
+        <li className="barra-text">Produtos Que Evangelizam</li>
         </ul>
     </div>
 

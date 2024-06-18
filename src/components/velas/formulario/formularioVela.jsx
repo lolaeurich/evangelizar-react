@@ -107,7 +107,7 @@ const FormularioVela = ({ vela, mode, callback, onSubmit, inPopup }) => {
             <div className="atencao1-vela" style={{ width: inPopup ? '900px' : '610px' }}>
                 <img className="atencao-img" alt="" src={atencao} />
                 <p className="atencao-p">
-                    <span className="atencao-span">Sua vela ficará acesa por 09 dias.</span> Após esse período, será apagada automaticamente, mas você pode reacendê-la novamente. Para saber mais, consulte nossa política de privacidade.
+                    <span className="atencao-span">Sua vela ficará acesa por 09 dias.</span> Após esse período, será apagada automaticamente, mas você pode reacendê-la. Para saber mais, consulte nossa política de privacidade.
                 </p>
             </div>
             {mode === 'editar' ? (

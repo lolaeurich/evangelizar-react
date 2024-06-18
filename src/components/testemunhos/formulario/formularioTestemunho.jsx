@@ -124,8 +124,8 @@ const FormularioTestemunho = ({testemunho, mode, callback, onSubmit }) => {
 
         <div className="atencao1-vela">
             <img className="atencao-img" alt="" src={atencao}/>
-            <p className="atencao-p"><span className="atencao-span">Seu testemunho ficará ativo por 09 dias.</span> Após esse período, será apagada 
-                automaticamente, mas você pode reacendê-la novamente. Para saber 
+            <p className="atencao-p"><span className="atencao-span">Seu testemunho ficará ativo por 09 dias.</span> Após esse período, será apagado 
+                automaticamente, mas você pode republicá-lo. Para saber 
                 mais, consulte nossa política de privacidade.</p>
         </div>
 

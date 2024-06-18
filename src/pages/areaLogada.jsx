@@ -174,7 +174,7 @@ function AreaLogada () {
                     <img alt="" className="hand" src={hand}/>
                     <div className="doacao-text">
                         <h3 className="doacao-h3">Faça sua doação</h3>
-                        <p className="doacao-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p className="doacao-p">Ajude a transformar a vida de milhares de pessoas.</p>
                     </div>
                     <img alt="" className="arrow2" src={arrow2} onClick={handleButtonClick} href="https://doar.evangelizarepreciso.com.br/doacoes-site"/>
                 </div>
@@ -185,7 +185,7 @@ function AreaLogada () {
                     <img alt="" className="vela" src={vela}/>
                         <div className="vela-text">
                             <h3 className="vela-h3">Minhas Velas</h3>
-                            <p className="vela-p">Edite aqui suas informações de perfil, complete seu cadastro ou cadastre novos usuários mirins</p>
+                            <p className="vela-p">Acenda e apague suas velas virtuais a qualquer momento.</p>
                         </div>
                     <img alt="" className="arrow" src={blueArrow} onClick={routeChangeVela}/>
                 </div>
@@ -193,7 +193,7 @@ function AreaLogada () {
                     <img alt="" className="livro" src={livro}/>
                         <div className="livro-text">
                             <h3 className="livro-h3">Revista Turma do Manzottinho</h3>
-                            <p className="livro-p">Edite aqui suas informações de perfil, complete seu cadastro ou cadastre novos usuários mirins</p>
+                            <p className="livro-p">Acesse as revistas da Turminha e cadastre novos associados mirins.</p>
                         </div>
                     <img alt="" className="arrow" src={blueArrow} onClick={routeChange3}/>
                 </div>
@@ -204,7 +204,7 @@ function AreaLogada () {
                     <img alt="" className="chat" src={chat}/>
                         <div className="chat-text">
                             <h3 className="chat-h3">Meus Testemunhos</h3>
-                            <p className="chat-p">Edite aqui suas informações de perfil, complete seu cadastro ou cadastre novos usuários mirins</p>
+                            <p className="chat-p">Inspire outras pessoas por meio do seu testemunho. Escreva-o aqui.</p>
                         </div>
                     <img alt="" className="arrow" src={blueArrow} onClick={routeChange2}/>
                 </div>
@@ -212,7 +212,7 @@ function AreaLogada () {
                     <img alt="" className="jornal" src={jornal}/>
                         <div className="jornal-text">
                             <h3 className="jornal-h3">Jornal do Evangelizador</h3>
-                            <p className="jornal-p">Edite aqui suas informações de perfil, complete seu cadastro ou cadastre novos usuários mirins</p>
+                            <p className="jornal-p">Acesse as últimas edições do Jornal do Evangelizador e atualize seu cadastro.</p>
                         </div>
                     <img alt="" className="arrow" src={blueArrow} onClick={routeChange8}/>
                 </div>

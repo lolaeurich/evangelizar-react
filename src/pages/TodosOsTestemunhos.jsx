@@ -138,7 +138,7 @@ function TodosOsTestemunhos () {
                 <li className="barra-text">Rádio Evangelizar</li>
                 <li className="barra-text">Jesus das Santas Chagas</li>
                 <li className="barra-text">Turma do Manzottinho</li>
-                <li className="barra-text">Produtos que Evangelizam</li>
+                <li className="barra-text">Produtos Que Evangelizam</li>
                 </ul>
             </div>
 
@@ -242,8 +242,8 @@ function TodosOsTestemunhos () {
 
                     <div className="atencao22">
                         <img className="atencao-img" alt="" src={atencao}/>
-                        <p className="atencao-p"><span className="atencao-span">Seu testemunho ficará online por 09 dias.</span> Após esse período, será apagada 
-                            automaticamente, mas você pode reacendê-la novamente. Para saber 
+                        <p className="atencao-p"><span className="atencao-span">Seu testemunho ficará online por 09 dias.</span> Após esse período, será apagado 
+                            automaticamente, mas você pode republicá-lo. Para saber 
                             mais, consulte nossa política de privacidade.</p>
                     </div>
                     <button className="btn-vela22" onClick={handleSaveChanges}>
