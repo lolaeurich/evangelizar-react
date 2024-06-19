@@ -67,10 +67,6 @@ const VelaUnica = ({vela}) => {
         // Chama a função para salvar as alterações na vela
         editarVela(velaAtualizada);
     };
-    
-    
-    
-
 
 
     return (

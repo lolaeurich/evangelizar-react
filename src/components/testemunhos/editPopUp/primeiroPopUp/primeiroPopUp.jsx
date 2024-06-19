@@ -6,8 +6,7 @@ const EditTestemunhoPopup = ({ testemunho, onSave, onClose }) => {
         <div className="popup-container">
             <div className="popup">
                 <button onClick={onClose} className="fechar-popup">x</button>
-                <h2>Editar Testemunho</h2>
-                <FormularioTestemunho vela={testemunho} mode={'editar'} onSubmit={onSave} />
+                <FormularioTestemunho testemunho={testemunho} onClose={clearFormAndClose} />
             </div>
         </div>
     );

@@ -65,7 +65,7 @@ const TestemunhoUnico = ({testemunho}) => {
                             <div className="popup-container">
                                 <div className="popup">
                                     <button onClick={handleCloseEditPopup} className="fechar-popup">x</button>
-                                    <h2>Editar Testemunho</h2>
+                                
                                     <FormularioTestemunho testemunho={testemunho} mode={'editar'} onSubmit={handleSaveChanges} />
                                 </div>
                             </div>
