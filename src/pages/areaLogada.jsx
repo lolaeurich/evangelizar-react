@@ -32,6 +32,12 @@ function AreaLogada () {
     window.location.href = "/AreaLogada";
   };
 
+  let navigateHome = useNavigate(); 
+  const routeChangeHome = () =>{ 
+    let path = `/AreaLogada`; 
+    navigateHome(path);
+  }
+
 
     let navigateVela = useNavigate(); 
     const routeChangeVela = () =>{ 
@@ -56,9 +62,6 @@ function AreaLogada () {
       let path = `/VerJornal`; 
       navigateJornal(path);
     }
-
-
-
 
 
 
@@ -130,7 +133,7 @@ function AreaLogada () {
                 <hr className="linha-drop" />
                 <li onClick={routeChangeJornal}>Jornal do Evangelizador<img alt="" src={arrow}/></li>
                 <hr className="linha-drop" />
-                <li onClick>Retornar para a página inicial<img alt="" src={arrow}/></li>
+                <li onClick={routeChangeHome}>Retornar para a página inicial<img alt="" src={arrow}/></li>
                 <hr className="linha-drop" />
                 <button className="donation-drop" onClick={handleButtonClick} href="https://doar.evangelizarepreciso.com.br/doacoes-site">
                       <img className="span-btn" alt="" src={heart} />
