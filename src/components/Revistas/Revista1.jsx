@@ -58,6 +58,12 @@ function MyBook(props) {
       navigateVela(path);
     }
 
+    let navigateHome = useNavigate(); 
+    const routeChangeHome = () =>{ 
+      let path = `/AreaLogada`; 
+      navigateHome(path);
+    }
+
     let navigateTest = useNavigate(); 
     const routeChangeTest = () =>{ 
       let path = `/MeusTestemunhos`; 
@@ -139,7 +145,7 @@ function MyBook(props) {
                 <hr className="linha-drop" />
                 <li onClick={routeChangeJornal}>Jornal do Evangelizador<img alt="" src={arrow}/></li>
                 <hr className="linha-drop" />
-                <li onClick={handleHomeClick}>Retornar para a página inicial<img alt="" src={arrow}/></li>
+                <li onClick={routeChangeHome}>Retornar para a página inicial<img alt="" src={arrow}/></li>
                 <hr className="linha-drop" />
                 <button className="donation-drop" onClick={handleButtonClick} href="https://doar.evangelizarepreciso.com.br/doacoes-site">
                       <img className="span-btn" alt="" src={heart} />

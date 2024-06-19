@@ -81,6 +81,12 @@ function MyJornal2(props) {
       navigateJornal(path);
     }
 
+    let navigateHome = useNavigate(); 
+    const routeChangeHome = () =>{ 
+      let path = `/AreaLogada`; 
+      navigateHome(path);
+    }
+
     const handleButtonClick = () => {
       // Redireciona para o site desejado quando o botão é clicado
       window.location.href = 'https://doar.evangelizarepreciso.com.br/doacoes-site';
@@ -145,7 +151,7 @@ function MyJornal2(props) {
                 <hr className="linha-drop" />
                 <li onClick={routeChangeJornal}>Jornal do Evangelizador<img alt="" src={arrow}/></li>
                 <hr className="linha-drop" />
-                <li onClick={handleHomeClick}>Retornar para a página inicial<img alt="" src={arrow}/></li>
+                <li onClick={routeChangeHome}>Retornar para a página inicial<img alt="" src={arrow}/></li>
                 <hr className="linha-drop" />
                 <button className="donation-drop" onClick={handleButtonClick} href="https://doar.evangelizarepreciso.com.br/doacoes-site">
                       <img className="span-btn" alt="" src={heart} />
