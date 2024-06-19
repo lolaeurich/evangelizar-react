@@ -61,19 +61,34 @@ export const VelasProvider = ({children}) => {
     }
 
     const editarVela = async (vela) => {
-        const { data } = await axios.put(`https://arearestritaevangelizar.belogic.com.br/api/vela/${vela.id}`, vela, {
-            headers: {
-                authorization: `Bearer ${localStorage.getItem('token')}`
+        try {
+            const { id, status } = vela;
+    
+            const { data } = await axios.put(
+                `https://arearestritaevangelizar.belogic.com.br/api/vela/${id}/atualizar-status`,
+                { status }, // Envie apenas o campo 'status' para atualizar
+                {
+                    headers: {
+                        Authorization: `Bearer ${localStorage.getItem('token')}`
+                    }
+                }
+            );
+    
+            // Verifica se a resposta foi bem-sucedida
+            if (data.success) {
+                console.log(`Vela ${id} atualizada com sucesso!`);
+            } else {
+                console.error(`Erro ao atualizar vela ${id}: ${data.message}`);
             }
-        })
-
-        console.log('data', data)
-
-        const velasTmp = velas.filter(vela => vela.id !== vela.id)
-        // setVelas([...velasTmp, vela])
-        await fetchVelas();
-    }
-
+    
+            // Atualiza a lista de velas após edição
+            fetchVelas();
+        } catch (error) {
+            console.error('Erro ao editar vela:', error);
+            // Tratar erros aqui
+        }
+    };
+    
     const excluirVela = async (id) => {
         const velasTmp = velas.filter(vela => vela.id !== id)
         const { data } = await axios.delete(`https://arearestritaevangelizar.belogic.com.br/api/vela/${id}`, {
