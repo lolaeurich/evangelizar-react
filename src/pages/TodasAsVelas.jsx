@@ -163,9 +163,14 @@ function TodasAsVelas () {
                     <div className="bar"></div>
                 </div>
                 <img className="menu-superior-img" alt="" src={logo}/>
+                <div className="nova-div-nav">
+                <button className="donationok" onClick={handleButtonClick} href="https://doar.evangelizarepreciso.com.br/doacoes-site">
+                  <img className="span-btn" alt="" src={heart} />
+                  <span>Faça sua doação</span>
+              </button>
                 <h4 className="menu-superior-h4">Área Restrita</h4>
             </div>  
-            <img className="lupa" alt="" src={lupa}/> 
+            </div>
             {isDropdownOpen && (
           <div className="dropdown">
               <ul>

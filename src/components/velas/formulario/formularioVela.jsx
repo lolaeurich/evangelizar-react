@@ -113,7 +113,7 @@ const FormularioVela = ({ vela, mode, onSubmit, inPopup, onClose }) => {
                     <textarea className='inputvela-motivo' maxLength="150" value={descricao} type='text' name="descricao" style={{ wordWrap: 'break-word' }} placeholder="Adicionar texto" onChange={(e) => setDescricao(e.target.value)} />
                 </div>
             </form>
-            <div className="topping1" style={{ width: inPopup ? '900px' : '490px' }}> {/* Aplicando largura de 600px se estiver na popup */}
+            <div className="topping1" style={{ width: inPopup ? '490px' : '490px' }}> {/* Aplicando largura de 600px se estiver na popup */}
                 <input
                     className="check2"
                     type="checkbox"
@@ -125,7 +125,7 @@ const FormularioVela = ({ vela, mode, onSubmit, inPopup, onClose }) => {
                 />
                 Quero publicar essa vela anonimamente, sem divulgar meu nome.
             </div>
-            <div className="topping1" style={{ width: inPopup ? '850px' : '490px' }}>
+            <div className="topping1" style={{ width: inPopup ? '490px' : '490px' }}>
                 <input
                     className="check2"
                     type="checkbox"
@@ -134,10 +134,10 @@ const FormularioVela = ({ vela, mode, onSubmit, inPopup, onClose }) => {
                     checked={atencaoCheck}
                     onChange={(e) => setAtencaoCheck(e.target.checked)}
                 />
-                <span style={{ width: inPopup ? '1500px' : '513px', marginRight: inPopup ? '150px' : '0px'  }}>ATENÇÃO:</span> Ao clicar no botão de “Adicionar vela”, você declara estar ciente que o conteúdo será publicado no site e poderá ser lido por outras pessoas. Evite escrever o nome completo das pessoas e outros dados pessoais que possam identificar o titular, pois os testemunhos poderão ser arquivados em mecanismos de busca da internet, a exemplo do Google. De acordo com o Marco Civil da Internet e demais legislações vigentes, a Associação Evangelizar É Preciso está isenta de toda e qualquer responsabilidade proveniente do conteúdo constante da sua publicação.
+                <span style={{ width: inPopup ? '500px' : '513px', marginRight: inPopup ? '0px' : '0px' }}>ATENÇÃO:</span> Ao clicar no botão de “Adicionar vela”, você declara estar ciente que o conteúdo será publicado no site e poderá ser lido por outras pessoas. Evite escrever o nome completo das pessoas e outros dados pessoais que possam identificar o titular, pois os testemunhos poderão ser arquivados em mecanismos de busca da internet, a exemplo do Google. De acordo com o Marco Civil da Internet e demais legislações vigentes, a Associação Evangelizar É Preciso está isenta de toda e qualquer responsabilidade proveniente do conteúdo constante da sua publicação.
             </div>
             <hr className="vela-hr" />
-            <div className="atencao1-vela" style={{ width: inPopup ? '900px' : '610px' }}>
+            <div className="atencao1-vela" style={{ width: inPopup ? '600px' : '610px' }}>
                 <img className="atencao-img" alt="" src={atencao} />
                 <p className="atencao-p">
                     <span className="atencao-span">Sua vela ficará acesa por 09 dias.</span> Após esse período, será apagada automaticamente, mas você pode reacendê-la novamente. Para saber mais, consulte nossa política de privacidade.

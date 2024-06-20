@@ -10,13 +10,13 @@ const EditTestemunhoPopup = ({ testemunho, onSave, onClose }) => {
                     {/* Aqui adicionamos a prop inPopup com o valor true */}
                     <FormularioTestemunho
                         testemunho={testemunho}
-                        mode={mode}
-                        onSubmit={handleSubmit}
+                        mode={'editar'}
+                        onSubmit={onSave} // Agora estamos passando onSave diretamente
                         inPopup={true} // ou false, dependendo de como você define
-                        onClose={handleClose} // verifique se handleClose é uma função válida
+                        onClose={onClose} // Fechar a popup
                     />
                 </div>
-                </div>
+            </div>
         </div>
     );
 }

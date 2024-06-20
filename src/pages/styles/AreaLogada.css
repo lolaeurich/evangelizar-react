@@ -71,6 +71,7 @@ html, body {
     line-height: 24px;
     text-align: left;
     color: #DDA63A;
+    text-decoration: underline;
   }
   .lupa {
     padding-right: 30px !important;
@@ -116,6 +117,13 @@ html, body {
         justify-content: space-around;
     }
 
+    .nova-div-nav {
+        display: flex;
+        align-items: center;
+        column-gap: 30px;
+        padding-left: 400px;
+    }
+
     .menu-superior {
         width: 100%;
         display: flex;
@@ -131,6 +139,16 @@ html, body {
       }
 
 }
+
+@media screen and (min-width: 1300px) {
+    .nova-div-nav {
+        display: flex;
+        align-items: center;
+        column-gap: 30px;
+        padding-left: 650px;
+    }
+}
+
 
 
 @media screen and (min-width: 1440px) {
@@ -172,6 +190,13 @@ html, body {
         flex-direction: row;
         align-items: center;
         justify-content: space-around;
+    }
+
+    .nova-div-nav {
+        display: flex;
+        align-items: center;
+        column-gap: 30px;
+        padding-left: 650px;
     }
 
     .menu-superior {
@@ -233,10 +258,17 @@ html, body {
             justify-content: space-around;
         }
 
+        .nova-div-nav {
+            display: flex;
+            align-items: center;
+            column-gap: 30px;
+            padding-left: 715px;
+        }
+
         .menu-superior {
             column-gap: 65px;
-            width: 84%;
-            padding-inline: 33px;
+            width: 86%;
+            padding-inline: 0px;
             justify-content: flex-start;
         }
 

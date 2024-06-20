@@ -32,14 +32,24 @@ export const TestemunhosProvider = ({ children }) => {
     const inserirTestemunho = async (testemunho) => {
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.post('https://arearestritaevangelizar.belogic.com.br/api/testemunho', testemunho, {
-                headers: {
-                    Authorization: `Bearer ${token}`
+            const response = await axios.post(
+                'https://arearestritaevangelizar.belogic.com.br/api/testemunho',
+                testemunho,
+                {
+                    headers: {
+                        Authorization: `Bearer ${token}`
+                    }
                 }
-            });
+            );
             await fetchTestemunhos(); // Atualiza o estado local após adição
         } catch (error) {
-            console.error('Erro ao adicionar vela:', error);
+            if (error.response && error.response.status === 422) {
+                console.error('Erro de validação ao adicionar testemunho:', error.response.data);
+                // Exiba mensagens de erro específicas para o usuário
+            } else {
+                console.error('Erro ao adicionar testemunho:', error);
+                // Exiba uma mensagem genérica de erro para o usuário
+            }
         }
     };
 
