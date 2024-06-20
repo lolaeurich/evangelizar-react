@@ -7,8 +7,8 @@ import arrow2 from "../../../assets/Home/arrow2.png";
 const FormularioVela = ({ vela, mode, onSubmit, inPopup, onClose }) => {
     const { inserirVela, editarVela } = useContext(VelasContext);
 
-    const [titulo, setTitulo] = useState(mode === 'editar' ? vela.titulo : '');
     const [motivos, setMotivos] = useState([]);
+    const [titulo, setTitulo] = useState(mode === 'editar' ? vela.titulo : '');
     const [motivo, setMotivo] = useState(mode === 'editar' ? vela.motivo : '');
     const [cidade, setCidade] = useState(mode === 'editar' ? vela.cidade : '');
     const [descricao, setDescricao] = useState(mode === 'editar' ? vela.motivo_descricao : '');

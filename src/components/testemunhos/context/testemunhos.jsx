@@ -47,9 +47,7 @@ export const TestemunhosProvider = ({ children }) => {
         try {
             const token = localStorage.getItem('token');
             const { id } = testemunhoAtualizado;
-    
-            console.log('Dados a serem enviados para a API (editar):', testemunhoAtualizado); // Verifique os dados antes de enviar
-    
+            // console.log('Dados a serem enviados para a API (editar):', testemunhoAtualizado); // Verifique os dados antes de enviar
             const response = await axios.put(
                 `https://arearestritaevangelizar.belogic.com.br/api/testemunho/${id}`,
                 testemunhoAtualizado,
@@ -62,8 +60,8 @@ export const TestemunhosProvider = ({ children }) => {
     
             console.log('Resposta da API (editar):', response.data); // Verifique a resposta da API
     
-            if (response && response.data && response.data.success) {
-                console.log(`Testemunho ${id} atualizado com sucesso!`);
+            if (response.data.success) {
+                console.log(`Testemunho ${id} atualizada com sucesso!`);
                 await fetchTestemunhos(); // Atualiza o estado local após edição
             } else {
                 console.error(`Erro ao atualizar testemunho ${id}: ${response.data.message}`);
@@ -72,6 +70,7 @@ export const TestemunhosProvider = ({ children }) => {
             console.error('Erro ao editar testemunho:', error);
         }
     };
+    
     
     
     

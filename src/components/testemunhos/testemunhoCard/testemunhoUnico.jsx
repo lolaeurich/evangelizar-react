@@ -54,6 +54,18 @@ const TestemunhoUnico = ({testemunho}) => {
 
     const toggleSwitch = () => {
         setSwitchState(!switchState);
+
+          // Define o status da vela com base no switch
+          const novoStatus = switchState ? 'Inativo' : 'Ativo';
+    
+          // Cria uma cópia da vela com o novo status
+          const testemunhoAtualizado = {
+              ...testemunho,
+              status: novoStatus
+          };
+      
+          // Chama a função para salvar as alterações na vela
+          editarTestemunho(testemunhoAtualizado);
     };
 
 
