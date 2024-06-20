@@ -175,14 +175,15 @@ function VerRevista () {
 
             <div className='vitrine-revistas'>
               <div className='so-revistas'>
-                <div className='revista-solo'>
-                  <img alt='revista11' className='revista1' src={pag1}/>
-                  <p className='revista-legenda'>Abril 2024 - edição n° 43</p>
-                  <button className="btn-ver-revista2" onClick={routeChange4}>
+
+              <div className='revista-solo'>
+                <img alt='revista1' className='revista1' src={junho1} />
+                  <p className='revista-legenda'>Junho 2024 - edição n° 45</p>
+                  <button className="btn-ver-revista2" onClick={routeChange6}>
                       <img className="btn-ver-revista-icon" alt="" src={eye} />
                       <p>Visualizar</p>
                   </button>
-                </div>  
+                </div> 
 
                 <div className='revista-solo'>
                 <img alt='revista1' className='revista1' src={maio1}/>
@@ -194,13 +195,13 @@ function VerRevista () {
                 </div> 
 
                 <div className='revista-solo'>
-                <img alt='revista1' className='revista1' src={junho1} />
-                  <p className='revista-legenda'>Junho 2024 - edição n° 45</p>
-                  <button className="btn-ver-revista2" onClick={routeChange6}>
+                  <img alt='revista11' className='revista1' src={pag1}/>
+                  <p className='revista-legenda'>Abril 2024 - edição n° 43</p>
+                  <button className="btn-ver-revista2" onClick={routeChange4}>
                       <img className="btn-ver-revista-icon" alt="" src={eye} />
                       <p>Visualizar</p>
                   </button>
-                </div> 
+                </div>  
                
               </div>
             </div>
