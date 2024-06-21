@@ -34,22 +34,26 @@ function Home() {
       const payload = {
         email,
         password,
-        associado: true
-      }
-
-      const response = await axios.post('https://arearestritaevangelizar.belogic.com.br/api/login', payload)
-      const { token } = response.data.authorization 
-
-      //todo: armazenar token.
-      localStorage.clear()
-      localStorage.setItem('token', token)
-
-      setEmail("")
-      setPassword("")
-
-      navigate("/areaLogada")
+        associado: true,
+        tipo: 2 // Certifique-se de que tipo está sendo enviado corretamente
+      };
+  
+      console.log("Payload enviado:", payload); // Debug: Verifique se os dados estão corretos
+  
+      const response = await axios.post('https://arearestritaevangelizar.belogic.com.br/api/login', payload);
+      
+      const { token } = response.data.authorization;
+  
+      localStorage.clear();
+      localStorage.setItem('token', token);
+  
+      setEmail("");
+      setPassword("");
+  
+      navigate("/areaLogada");
     } catch (error) {
-      setError("Login ou senha incorretos!"); // Define a mensagem de erro
+      console.error("Erro ao fazer login:", error); // Debug: Exibe o erro no console para diagnóstico
+      setError("Login ou senha incorretos!");
     }
   }
 

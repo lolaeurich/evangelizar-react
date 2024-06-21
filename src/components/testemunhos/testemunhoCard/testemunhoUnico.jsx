@@ -2,6 +2,9 @@ import React, { useContext, useState } from "react";
 import FormularioTestemunho from "../formulario/formularioTestemunho.jsx";
 import SegundoPopUp from "../editPopUp/segundoPopUp/segundoPopUp.jsx";
 import { TestemunhosContext } from "../context/testemunhos.jsx";
+import chat from "../../../assets/areaLogada/chat.png"
+import caneta from "../../../assets/MinhasVelas/caneta.png";
+import trash from "../../../assets/MinhasVelas/trash.png";
 
 const TestemunhoUnico = ({ testemunho }) => {
     const { cidade, titulo, motivo_descricao } = testemunho;
@@ -77,34 +80,99 @@ const TestemunhoUnico = ({ testemunho }) => {
                 <SegundoPopUp callback={handleCloseNextPopup} />
             )}
 
-            <div className={`card-vela ${switchState ? '' : 'apagada'}`}>
-                <div className={`card-info ${switchState ? '' : 'apagada'}`}>
-                    <div className={`dados-vela ${switchState ? '' : 'apagada'}`}>
-                        <div className="card-titulo">
-                            <h5 className={`card-h5 ${switchState ? '' : 'apagada'}`}>{cidade}</h5>
-                            <h4 className={`card-h4 ${switchState ? '' : 'apagada'}`}>{titulo}</h4>
+            <div className={`card-vela ${switchState ? "" : "apagada"}`}>
+                <div className={`card-info ${switchState ? "" : "apagada"}`}>
+                    <div className={`dados-vela ${switchState ? "" : "apagada"}`}>
+                        <img
+                            alt=""
+                            className={`dados-img ${
+                                switchState ? "" : "apagada"
+                            }`}
+                            src={chat}
+                        />
+                        <div className="card-titulo" style={{paddingLeft: "15px"}}>
+                            <h5
+                                className={`card-h5 ${
+                                    switchState ? "" : "apagada"
+                                }`}
+                            >
+                                {cidade}
+                            </h5>
+                            <h4
+                                className={`card-h4 ${
+                                    switchState ? "" : "apagada"
+                                }`}
+                            >
+                                {titulo}
+                            </h4>
                         </div>
                     </div>
 
-                    <p className={`card-motivo ${switchState ? '' : 'apagada'}`}>"{motivo_descricao}"</p>
+                    <p
+                        className={`card-motivo ${
+                            switchState ? "" : "apagada"
+                        }`}
+                    >
+                        "{motivo_descricao}"
+                    </p>
 
-                    <div className="card-acoes">
+                    <div className="card-acoes" style={{width: "80%"}}>
                         <div className="editar-card" onClick={handleEditTestemunho}>
-                            <p className={`vela-edit-p ${switchState ? '' : 'apagada'}`}>Editar testemunho</p>
+                            <img
+                                alt=""
+                                className={`vela-edit-img ${
+                                    switchState ? "" : "apagada"
+                                }`}
+                                src={caneta}
+                            />
+                            <p
+                                className={`vela-edit-p ${
+                                    switchState ? "" : "apagada"
+                                }`}
+                            >
+                                Editar Testemunho
+                            </p>
                         </div>
 
-                        <div className="excluir-card" onClick={handleDeleteTestemunho}>
-                            <p className={`vela-edit-p ${switchState ? '' : 'apagada'}`}>Excluir testemunho</p>
+                        <div
+                            className="excluir-card"
+                            onClick={handleDeleteTestemunho}
+                        >
+                            <img
+                                alt=""
+                                className={`vela-edit-img ${
+                                    switchState ? "" : "apagada"
+                                }`}
+                                src={trash}
+                            />
+                            <p
+                                className={`vela-edit-p ${
+                                    switchState ? "" : "apagada"
+                                }`}
+                            >
+                                Excluir testemunho
+                            </p>
                         </div>
                     </div>
                 </div>
 
-                <div className='card-switch'>
+                <div className="card-switch">
                     <label className="switch">
-                        <input id="mySwitch" type="checkbox" checked={switchState} onChange={toggleSwitch} />
+                        <input
+                            id="mySwitch"
+                            type="checkbox"
+                            checked={switchState}
+                            onChange={toggleSwitch}
+                        />
                         <span className="slider round"></span>
                     </label>
-                    <p className={`legenda-switch ${switchState ? '' : 'apagada'}`}>{switchState ? 'Ativo' : 'Expirado'}</p>
+                    <p
+                        className={`legenda-switch ${
+                            switchState ? "" : "apagada"
+                        }`}
+                    >
+                        {switchState ? "Acesa" : "Apagada"}
+                    </p>
                 </div>
             </div>
         </>
